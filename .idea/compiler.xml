@@ -11,5 +11,16 @@
         <module name="controller" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="12">
+      <module name="view" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--add-exports javafx.graphics=ALL-UNNAMED/" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="controller" options="" />
+      <module name="model" options="" />
+      <module name="view" options="" />
+    </option>
   </component>
 </project>

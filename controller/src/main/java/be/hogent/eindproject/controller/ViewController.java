@@ -1,24 +1,12 @@
 package be.hogent.eindproject.controller;
 
-import be.hogent.eindproject.model.repositories.BeverageRepository;
-import be.hogent.eindproject.model.repositories.OrderRepository;
-import be.hogent.eindproject.model.repositories.WaiterRepository;
+import be.hogent.eindproject.model.repositories.Repository;
 
 public class ViewController {
-    private final BeverageRepository beverageRepository;
-    private final WaiterRepository waiterRepository;
-    private final OrderRepository orderRepository;
+    private Repository repository;
 
     public ViewController() {
-        beverageRepository = new BeverageRepository();
-        waiterRepository = new WaiterRepository();
-        orderRepository = new OrderRepository(beverageRepository,waiterRepository);
-        populateRepos();
+        repository = new Repository();
     }
 
-    private void populateRepos() {
-        beverageRepository.populateRepo();
-        waiterRepository.populateRepo();
-        orderRepository.populateRepo();
-    }
 }

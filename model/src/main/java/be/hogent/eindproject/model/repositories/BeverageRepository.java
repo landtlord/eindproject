@@ -11,6 +11,11 @@ public class BeverageRepository {
         beverages = new TreeMap();
     }
 
+    public Beverage getById(int id) {
+        return beverages.get(id);
+    }
+
+
     public void populateRepo(){
       beverages.put( 1,new Beverage (1,"Cola",2.40));
       beverages.put( 2,new Beverage (2,"Leffe",3.00));
@@ -31,8 +36,4 @@ public class BeverageRepository {
       beverages.put( 17,new Beverage (17,"Minute Maid",2.80));
     }
 
-
-    public Beverage getById(int id) {
-        return beverages.get(id);
-    }
 }
